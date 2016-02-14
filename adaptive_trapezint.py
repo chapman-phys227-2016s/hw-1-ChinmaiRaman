@@ -70,10 +70,6 @@ def integrals():
     sin1 = adaptive_trapezint(sin, 0, np.pi)
     sin2 = adaptive_trapezint(sin, 0, np.pi / 2)
     
-    print(cos1)
-    print(sin1)
-    print(sin2)
-    
     exactcos = 0
     exactsin = 2
     exactsin2 = 1
@@ -93,3 +89,5 @@ def f(x):
 def test():
     print(abs(trapezint(f, 0, 2, 10)))
     assert (abs(trapezint(f, 0, 2, 10) - 12.0) < 1E-5)
+    
+integrals()
